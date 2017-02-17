@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.6)
+project(CPSC_131)
+
+add_subdirectory(Homework_01)
+add_subdirectory(Homework_02)
+add_subdirectory(Homework_03)
+
+add_subdirectory(ClassActivity_20170131)
+add_subdirectory(ClassActivity_20170202)
+add_subdirectory(ClassActivity_20170214)
