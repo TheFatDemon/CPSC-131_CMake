@@ -37,7 +37,7 @@ int main() {
         students.addFront(s);
     }
 
-    for (SNodeList<Student>::Iterator i = students.begin(); i != students.end(); ++i) {
+    for (SNodeList<Student>::Iterator i = students.begin(); i != students.end(); ++++i) {
         i.get().print();
     }
     // system("pause");
