@@ -1,4 +1,4 @@
-# CSUF CPSC-131 Project
+# CSUF CPSC-131 Assignments
 
 ## Hi There
 
