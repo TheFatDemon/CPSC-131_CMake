@@ -5,6 +5,7 @@
 #pragma once
 
 #include <stdexcept>
+#include <iostream>
 
 using namespace std;
 
@@ -28,6 +29,7 @@ public:
     void addFront(const E& e);		// add to front of list
     void removeFront();			// remove front item list
     int size() const;					// list size
+    void printEveryOther();
 private:
     SNode<E>* head;				// head of the list
     int     n;							// number of items
@@ -77,4 +79,24 @@ void SLinkedList<E>::removeFront() {		// remove front item
 template <typename E>
 int SLinkedList<E>::size() const {				// list size
     return n;
+}
+
+template <typename E>
+void SLinkedList<E>::printEveryOther() {
+    if (empty()) throw length_error("empty list");
+
+    SNode<E>* temp = head;
+    int current = 0;
+
+    while (temp->next != NULL) {
+        if (current % 2 == 0) {
+            cout << temp->elem << endl;
+        }
+        current++;
+        temp = temp->next;
+    }
+
+    if (current % 2 == 0 && temp != NULL) {
+        cout << temp->elem << endl;
+    }
 }
