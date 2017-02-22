@@ -19,6 +19,7 @@ int main() {
     words.addFront("6");
     words.addFront("7");
     words.addFront("8");
+    words.removeFront();
     words.addFront("9");
 
     words.printEveryOther();
