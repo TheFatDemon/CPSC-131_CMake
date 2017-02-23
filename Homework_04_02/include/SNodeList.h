@@ -37,7 +37,7 @@ public:
 		Iterator& operator++() {		// move to next position
 			v = v->next; return *this;
 		}
-		friend class SNodeList;			// give NodeList access
+		friend class SNodeList;// give NodeList access
 	private:
 		SNode<E>* v;					// pointer to the node
 		Iterator(SNode<E>* u) {		// constructor from SNode*
@@ -56,14 +56,29 @@ public:
 	Iterator begin() const {		// beginning position is first item
 		return Iterator(head);
 	}
-	Iterator end() const {		// end position is just beyond last
+	static Iterator end()  {		// end position is just beyond last
 		return Iterator(NULL);
 	}
+    void printEveryOther();
 
 private:
 	SNode<E>* head;				// head of the list
 	int     n;							// number of items
 };
+
+template <typename E>
+void SNodeList<E>::printEveryOther() {
+    SNode<E>* current;
+    current = head;
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            current->elem.print();
+        }
+        if (current->next != NULL) {
+            current = current->next;
+        }
+    }
+}
 
 template <typename E>
 SNodeList<E>::SNodeList()			// constructor
