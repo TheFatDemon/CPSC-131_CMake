@@ -68,6 +68,11 @@ private:
 
 template <typename E>
 void SNodeList<E>::printEveryOther() {
+
+    if (head == NULL) {
+        throw;
+    }
+
     SNode<E>* current;
     current = head;
     for (int i = 0; i < n; i++) {
