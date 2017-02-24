@@ -40,5 +40,7 @@ int main() {
     for (SNodeList<Student>::Iterator i = students.begin(); i != students.end(); ++++i) {
         i.get().print();
     }
+
+    return 0;
     // system("pause");
 }
