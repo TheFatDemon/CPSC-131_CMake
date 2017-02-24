@@ -69,9 +69,7 @@ private:
 template <typename E>
 void SNodeList<E>::printEveryOther() {
 
-    if (head == NULL) {
-        throw;
-    }
+    if (empty()) throw length_error("empty list");
 
     SNode<E>* current;
     current = head;
