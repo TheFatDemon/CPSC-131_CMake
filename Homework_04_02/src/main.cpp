@@ -37,9 +37,8 @@ int main() {
         students.addFront(s);
     }
 
-//    for (SNodeList<Student>::Iterator i = students.begin(); i != students.end(); ++++i) {
-//        i.get().print();
-//    }
-    students.printEveryOther();
+    for (SNodeList<Student>::Iterator i = students.begin(); i != students.end(); ++++i) {
+        i.get().print();
+    }
     // system("pause");
 }
