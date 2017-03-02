@@ -32,6 +32,7 @@ public:
     void removeFront();			         // remove from front
     void removeBack();			         // remove from back
     int size() const;					// list size
+    void swapFirstAndSecond();
 private:                               // local type definitions
     int     n;							// number of items
     DNode<E>* header;				         // header sentinel
@@ -127,4 +128,17 @@ void DLinkedList<E>::removeBack()		// remove from back
 template <typename E>
 int DLinkedList<E>::size() const {				// list size
     return n;
+}
+
+template <typename E>
+void DLinkedList<E>::swapFirstAndSecond() {
+    if (size() < 2) {
+        throw length_error("Not enough Elements");
+    }
+
+    DNode<E> *second = header->next;
+
+    header->next = second->next;
+
+    header = second;
 }
