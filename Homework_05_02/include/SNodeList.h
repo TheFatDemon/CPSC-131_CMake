@@ -79,7 +79,8 @@ void SNodeList<E>::printEveryOther(SNode<E> *current) {
 
 	if (current != NULL) {
         current->elem.print();
-		if (current->next != NULL && current->next->next != NULL) {
+		if (current->next != NULL
+            && current->next->next != NULL) {
 			printEveryOther(current->next->next);
 		}
 	}
