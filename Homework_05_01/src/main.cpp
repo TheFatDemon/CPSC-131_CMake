@@ -11,6 +11,9 @@ using namespace std;
 int main()
 {
     DLinkedList<string> lyrics;
-    // YOUR CODE TO CREATE THE LIST GOES HERE
+    lyrics.addFront("Give");
+    lyrics.addFront("To");
+    lyrics.addFront("Going");
+    lyrics.addFront("Never");
     cout << lyrics.front() << endl;
 }
