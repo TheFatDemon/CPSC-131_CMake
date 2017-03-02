@@ -7,6 +7,7 @@ add_subdirectory(Homework_03)
 add_subdirectory(Homework_04_01)
 add_subdirectory(Homework_04_02)
 add_subdirectory(Homework_05_01)
+add_subdirectory(Homework_05_02)
 
 add_subdirectory(ClassActivity_20170131)
 add_subdirectory(ClassActivity_20170202)
