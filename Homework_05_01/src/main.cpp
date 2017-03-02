@@ -15,4 +15,6 @@ int main()
     lyrics.addFront("Going");
     lyrics.addFront("Never");
     cout << lyrics.front() << endl;
+    lyrics.swapFirstAndSecond();
+    cout << lyrics.front() << endl;
 }
